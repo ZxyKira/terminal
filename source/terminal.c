@@ -34,9 +34,11 @@
 /*-----------------------------------------------------------------------------------------
  *    Inline Function
  */
+/*
 static inline bool terminal_compairTerminalCommand(const terminal_command_t *src, const terminal_command_t *dst){
 	return memcmp(src, dst, sizeof(terminal_command_t))?false:true;
-} 
+}
+*/
 
 static inline bool terminal_compairCommand(const terminal_command_t *dst, const char* command){
 	if(dst->command == 0x00000000)
@@ -101,6 +103,7 @@ static uint32_t terminal_convertArgs(terminal_handle_t* pHandle){
 		}
 		
 	}
+	return args;
 }
 
 static void terminal_doCommand(terminal_handle_t* pHandle){
